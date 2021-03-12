@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            background-color: #eee;
+        }
+        .info{
+            /* width: 50vw; */
+            width: 100%;
+            height: 100vh;
+            background-color: #388E3C;
+            padding: 15px;
+        }
+        .info-block{
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        form{
+            background-color: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            height: 300px;
+        }
+        .input_form{
+            border: none;
+            background-color: #eee;
+            padding: 2px;
+            width: 100%;
+            height: 30px;
+            font-size: 24px;
+            text-transform: uppercase;
+
+        }
+        .apply{
+            background-color: #03A9F4;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 140vh) {
+            .wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 200vh;
+                    /* justify-content: space-between; */
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <canvas id="app"></canvas>
+        <div class="info">
+            <p class="info-block">Степінь збільшення: <strong id="scale">1</strong></p>
+            <p class="info-block">Зміщення X: <strong id="biasx">0</strong></p>
+            <p class="info-block">Зміщення Y: <strong id="biasy">0</strong></p>
+            <form id = "main_form">
+                <label for="power">Степінь множини</label> <input type="number" value="2" name="power" id="power" class="input_form"><br>
+                <label for="rez">Re(z<sub>0</sub>)</label> <input type="number" value="0" name="real" id="rez" class="input_form"><br>
+                <label for="imz">Im(z<sub>0</sub>)</label> <input type="number" value="0" name="imagein" id="imz" class="input_form">
+                <button class="apply" type="submit">Застосувати</button>
+            </form><br>
+            <form id="cords-from">
+                <label for="power">Scale</label> <input type="text" value="0" name="scaleCords" id="scaleCords" class="input_form"><br>
+                <label for="power">X</label> <input type="text" value="0" name="biasxCord" id="biasxCord" class="input_form"><br>
+                <label for="power">Y</label> <input type="text" value="0" name="biasyCord" id="biasyCord" class="input_form"><br>
+                <button class="apply" type="submit">Застосувати</button>
+            </form>
+        </div>
+    </div>    
+    <script src="./root/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "gulia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:w": "parcel ./index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gpu.js": "^2.11.2"
+  }
+}
